@@ -104,7 +104,7 @@ mv bin/ %{buildroot}/opt/cni/
 
 %files
 %{_bindir}/kubelet
-%{_sysconfdir}/systemd/system/kubelet.service
+%config(noreplace) %{_sysconfdir}/systemd/system/kubelet.service
 %{_sysconfdir}/kubernetes/manifests/
 
 %files -n kubernetes-cni
